@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        let currentLab = 1; 
+
+        function showLabDetails(labNumber) {
+            currentLab = labNumber; 
+        }
+
+        function showDetail(detailType) {
+            const labDetails = {
+                1: {
+                    'Опис предметного середовища': 'Онлайн-автосалон — це платформа для покупки та продажу автомобілів. Користувачі можуть переглядати і фільтрувати автомобілі, створювати та управляти оголошеннями, шукати авто за різними критеріями, зв’язуватися з продавцями і переглядати деталі автомобілів. Продавці мають можливість додавати нові оголошення, редагувати їх та управляти ними. Адміністратори можуть модерати оголошення, управляти користувачами та переглядати аналітику. Платформа також підтримує платіжні системи для можливого платного просування оголошень і забезпечує безпеку транзакцій.',
+                    'Тема Мета Місце розташування': 'Тема: СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ.РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, СПИСКАМИ в HTML-ДОКУМЕНТІ.<br/>Мета: придбати практичні навички роботи з HTML-документом, таблицями, , зображеннями, посиланнями, списками, формамиСтворити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.',
+                    'СТРУКТУРА ДОКУМЕНТА': '!DOCTYPE html: Вказує тип документа (HTML5).<br/> html lang="uk": Встановлює мову сторінки як українську.<br/>head: Метаінформація (кодування, заголовок, підключення стилів).<br/>body: Основний вміст:<br/>header: Логотип.<br/>main:<br/>Привітання, опис автосалону.<br/>Таблиця популярних авто.<br/>Переваги компанії.<br/>Форма для звязку.<br/>footer: Підвал з копірайтом і посиланням.',
+                    'HTML-код ТАБЛИЦІ': '<img src="img/table_code.png" alt="HTML-код таблиці" style="position: absolute; top: 74%; left: 33%"><img src="img/table.png">',
+                    'HTML-код ФОРМИ': '<img src="img/form_code.png" alt="HTML-код форми" style="position: absolute; top: 90%; left: 34%"><img src="img/form.png">',
+                    'HTML-код ЗОБРАЖЕННЯ': '<img src="img/photo_code.png" alt="HTML-код зображення" style="position: absolute; top: 65%; left: 33%"><img src="img/photo.png" alt="HTML-код зображення">',
+                    'ВИСНОВКИ': 'У ході виконання лабораторної роботи були досягнуті ключові цілі: розвинено практичні навички роботи з HTML-документами, включаючи створення і редагування основних елементів, таких як заголовки, абзаци, списки і таблиці. Опановано вставку зображень і налаштування їх відображення, управління розмірами і розташуванням. Розглянуто додавання гіперпосилань для навігації, створення форм для збору даних від користувачів, а також організацію інформації за допомогою маркованих і нумерованих списків. В результаті створено шаблон звітного HTML-документа для відображення результатів усіх лабораторних завдань, що дозволяє структуровано і зрозуміло презентувати отримані дані. Робота допомогла закріпити знання HTML та здобути навички, які будуть корисні для розробки і підтримки веб-додатків.'
+                },
+            };
+
+            document.getElementById('lab-detail-content').innerHTML = labDetails[currentLab][detailType];
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+            <h2>З ДИСЦИПЛІНИ «ІНТЕРНЕТ-ТЕХНОЛОГІЇ ТА ПРОЄКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h2>
+        </header>
+
+        <div class="student-section">
+            <div class="group-info">
+                <p>Студента групи ІС-33</p>
+                <p>Степанчука Тимофія Вадимовича</p>
+            </div>
+            <div class="photo-container">
+                <img src="img/student_photo.jpg" alt="Фото студента" class="student-photo">
+            </div>
+        </div>
+
+        <nav class="lab-nav">
+            <button onclick="showLabDetails(1)">Лабораторна робота №1</button>
+            <button onclick="showLabDetails(2)">Лабораторна робота №2</button>
+            <button onclick="showLabDetails(3)">Лабораторна робота №3</button>
+            <button onclick="showLabDetails(4)">Лабораторна робота №4</button>
+            <button onclick="showLabDetails(5)">Лабораторна робота №5</button>
+            <button onclick="showLabDetails(6)">Лабораторна робота №6</button>
+            <button onclick="showLabDetails(7)">Лабораторна робота №7</button>
+            <button onclick="showLabDetails(8)">Лабораторна робота №8</button>
+            <button onclick="showLabDetails(9)">Лабораторна робота №9</button>
+        </nav>
+
+        <main class="content-wrapper">
+            <div class="left-sidebar">
+                <button onclick="showDetail('Опис предметного середовища')">Опис предметного середовища</button>
+                <button onclick="showDetail('Тема Мета Місце розташування')">Тема Мета Місце розташування лаби</button>
+                <button onclick="showDetail('СТРУКТУРА ДОКУМЕНТА')">СТРУКТУРА ДОКУМЕНТА</button>
+                <button onclick="showDetail('HTML-код ТАБЛИЦІ')">HTML-код ТАБЛИЦІ</button>
+                <button onclick="showDetail('HTML-код ФОРМИ')">HTML-код ФОРМИ</button>
+                <button onclick="showDetail('HTML-код ЗОБРАЖЕННЯ')">HTML-код ЗОБРАЖЕННЯ</button>
+                <button onclick="showDetail('ВИСНОВКИ')">ВИСНОВКИ</button>
+            </div>
+
+            <div class="lab-content">
+                <div id="lab-detail-content">Місце виведення інформації</div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
