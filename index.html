@@ -6,30 +6,47 @@
     <title>Звіти з лабораторних робіт</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        let currentLab = 1; 
+        let currentLab = 1;
 
         function showLabDetails(labNumber) {
-            currentLab = labNumber; 
+            currentLab = labNumber;
+            toggleButtons(labNumber); 
+        }
+
+        function toggleButtons(labNumber) {
+            const buttonsSection1 = document.getElementById('buttons-lab1');
+            const buttonsSection2 = document.getElementById('buttons-lab2');
+
+            if (labNumber === 2) {
+                buttonsSection1.style.display = 'none'; 
+                buttonsSection2.style.display = 'block'; 
+            } else {
+                buttonsSection1.style.display = 'block'; 
+                buttonsSection2.style.display = 'none';  
+            }
         }
 
         function showDetail(detailType) {
             const labDetails = {
                 1: {
                 'Опис предметного середовища': 'Онлайн-автосалон — це веб-платформа, яка забезпечує інтерактивний простір для купівлі та продажу автомобілів. Користувачі мають можливість переглядати автомобілі, використовуючи різноманітні фільтри для пошуку за характеристиками, такими як марка, модель, ціна, рік випуску та інші параметри. Кожне оголошення містить детальну інформацію про автомобіль, а також дозволяє користувачам звязуватися з продавцями напряму через платформу.<br\><br\>Продавці можуть створювати нові оголошення, вказуючи повну інформацію про автомобіль, завантажувати фотографії, редагувати наявні оголошення та керувати ними через особистий кабінет. Для зручності адміністраторів платформа надає інструменти для модерації оголошень, керування користувачами та перегляду статистики і аналітики.',
-                'Тема Мета Місце розташування': `Тема: СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ.РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, СПИСКАМИ в HTML-ДОКУМЕНТІ.<br/>
-                Мета: придбати практичні навички роботи з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документа для відображення результатів роботи всіх лабораторних робіт.<br/>
-                1. <a href="https://github.com/t1m0feevka/lab_reports" target="_blank">Звітний html-документ</a><br/>
-                2. <a href="https://t1m0feevka.github.io/lab_reports/" target="_blank">Жива сторінка html-документа</a><br/>
-                3. <a href="https://github.com/t1m0feevka/dilership" target="_blank">Посилання на WEB-застосунок</a><br/>
-                4. <a href="https://t1m0feevka.github.io/dilership/" target="_blank">Жива сторінка WEB-застосунку</a><br/>
-                5. <a href="https://github.com/t1m0feevka/independed_projects" target="_blank">Самостіна робота</a><br/>
-                6. <a href="https://t1m0feevka.github.io/independed_projects/" target="_blank">Жива сторінка самостійної роботи</a>`,
+                'Тема Мета Місце розташування': 'Тема: СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ.РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, СПИСКАМИ в HTML-ДОКУМЕНТІ.<br/>Мета: придбати практичні навички роботи з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документа для відображення результатів роботи всіх лабораторних робіт.<br/>1. <a href="https://github.com/t1m0feevka/lab_reports" target="_blank">Звітний html-документ</a><br/>2. <a href="https://t1m0feevka.github.io/lab_reports/" target="_blank">Жива сторінка html-документа</a><br/>3. <a href="https://github.com/t1m0feevka/dilership" target="_blank">Посилання на WEB-застосунок</a><br/>4. <a href="https://t1m0feevka.github.io/dilership/" target="_blank">Жива сторінка WEB-застосунку</a><br/>5. <a href="https://github.com/t1m0feevka/independed_projects" target="_blank">Самостіна робота</a><br/>6. <a href="https://t1m0feevka.github.io/independed_projects/" target="_blank">Жива сторінка самостійної роботи</a>',
                 'СТРУКТУРА ДОКУМЕНТА': '!DOCTYPE html: Вказує тип документа (HTML5).<br/> html lang="uk": Встановлює мову сторінки як українську.<br/>head: Метаінформація (кодування, заголовок, підключення стилів).<br/>body: Основний вміст:<br/>header: Логотип.<br/>main:<br/>Привітання, опис автосалону.<br/>Таблиця популярних авто.<br/>Переваги компанії.<br/>Форма для звязку.<br/>footer: Підвал з копірайтом і посиланням.',
-                'HTML-код ТАБЛИЦІ': '<img src="table_code.png" alt="HTML-код таблиці" style="position: absolute; top: 74%; left: 33%"><img src="table.png">',
-                'HTML-код ФОРМИ': '<img src="form_code.png" alt="HTML-код форми" style="position: absolute; top: 90%; left: 34%"><img src="form.png">',
-                'HTML-код ЗОБРАЖЕННЯ': '<img src="photo_code.png" alt="HTML-код зображення" style="position: absolute; top: 65%; left: 33%"><img src="photo.png" alt="HTML-код зображення">',
+                'HTML-код ТАБЛИЦІ': '<img src="img/table_code.png" alt="HTML-код таблиці" style="position: absolute; top: 74%; left: 33%"><img src="img/table.png">',
+                'HTML-код ФОРМИ': '<img src="img/form_code.png" alt="HTML-код форми" style="position: absolute; top: 90%; left: 34%"><img src="img/form.png">',
+                'HTML-код ЗОБРАЖЕННЯ': '<img src="img/photo_code.png" alt="HTML-код зображення" style="position: absolute; top: 65%; left: 33%"><img src="img/photo.png" alt="HTML-код зображення">',
                 'ВИСНОВКИ': 'У ході виконання лабораторної роботи були досягнуті ключові цілі: розвинено практичні навички роботи з HTML-документами, включаючи створення і редагування основних елементів, таких як заголовки, абзаци, списки і таблиці. Опановано вставку зображень і налаштування їх відображення, управління розмірами і розташуванням. Розглянуто додавання гіперпосилань для навігації, створення форм для збору даних від користувачів, а також організацію інформації за допомогою маркованих і нумерованих списків. В результаті створено шаблон звітного HTML-документа для відображення результатів усіх лабораторних завдань, що дозволяє структуровано і зрозуміло презентувати отримані дані. Робота допомогла закріпити знання HTML та здобути навички, які будуть корисні для розробки і підтримки веб-додатків.'
                 },
+                2: {
+                    'Тема, мета ЛР2, Місце розташування сайту, звіту': 'Тема: КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ .ІДЕНТИФІКАТОРИ. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ.<br/><br/>Мета: придбати практичні навички роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими елементами, оформленням текстових елементів',
+                    'Способи підключення стилів': 'Вбудовані стилі (Inline Styles):<br/>Використання атрибута style безпосередньо в HTML-елементі.html<br/><br/>Внутрішні стилі (Internal Styles):<br/>Використання тегу style у секції head документа. Це дозволяє визначити стилі для всього документа.<br/><br/>Зовнішні стилі (External Styles):<br/>Використання зовнішнього CSS-файлу, підключеного за допомогою тегу link у секції head. Це найпоширеніший спосіб, оскільки дозволяє повторно використовувати один і той же файл стилів на кількох сторінках.',
+                    'Селектори тегу': '<img src="img/tag_selector.png" alt="HTML-код селектор тегу" style="position: absolute; top: 41%; left: 31%">',
+                    'Селектори класу': '<img src="img/class_selector.png" alt="HTML-код селектор класу" style="position: absolute; top: 41%; left: 31%">',
+                    'Селектори ідентифікаторів': '<img src="img/indent_selector.png" alt="HTML-код селектор індентифікатору" style="position: absolute; top: 41%; left: 31%">',
+                    'Інші селектори': '<img src="img/other_selector1.png" alt="HTML-код універсального селектору" style="position: absolute; top: 41%; left: 31%"><img src="img/other_selector2.png" alt="HTML-код селектор атрибуту" style="position: absolute; top: 61%; left: 31%"><img src="img/other_selector3.png" alt="HTML-код селектор сусіда" style="position: absolute; top: 41%; left: 61%"><img src="img/other_selector4.png" alt="HTML-код дочірній селектор" style="position: absolute; top: 61%; left: 61%">',
+                    'CSS: Шрифт, Текст, Таблиці, Фон, Контур, Списки, CSS Просунутий': '<img src="img/styles.png" alt="css оформлення">',
+                    'Висновки': 'Виконуючи лабораторну роботу з каскадних таблиць стилів (CSS), було досягнуто мети щодо освоєння основних технік роботи з селекторами та ідентифікаторами, а також стильового оформлення елементів HTML-документів. Практика з різними властивостями кольору, фону, відступів та плаваючих елементів дозволила створювати більш структуровані й візуально привабливі веб-сторінки. Це допоможе в подальшій роботі над дизайном сайтів і створенні адаптивних інтерфейсів.'
+                }
             };
 
             document.getElementById('lab-detail-content').innerHTML = labDetails[currentLab][detailType];
@@ -48,7 +65,7 @@
                 <p>Студента групи ІС-33 Степанчука Тимофія Вадимовича</p>
             </div>
             <div class="photo-container">
-                <img src="student_photo.jpg" alt="Фото студента" class="student-photo">
+                <img src="img/student_photo.jpg" alt="Фото студента" class="student-photo">
             </div>
         </div>
 
@@ -66,13 +83,25 @@
 
         <main class="content-wrapper">
             <div class="left-sidebar">
-                <button onclick="showDetail('Опис предметного середовища')">Опис предметного середовища</button>
-                <button onclick="showDetail('Тема Мета Місце розташування')">Тема Мета Місце розташування лаби</button>
-                <button onclick="showDetail('СТРУКТУРА ДОКУМЕНТА')">СТРУКТУРА ДОКУМЕНТА</button>
-                <button onclick="showDetail('HTML-код ТАБЛИЦІ')">HTML-код ТАБЛИЦІ</button>
-                <button onclick="showDetail('HTML-код ФОРМИ')">HTML-код ФОРМИ</button>
-                <button onclick="showDetail('HTML-код ЗОБРАЖЕННЯ')">HTML-код ЗОБРАЖЕННЯ</button>
-                <button onclick="showDetail('ВИСНОВКИ')">ВИСНОВКИ</button>
+                <div id="buttons-lab1">
+                    <button onclick="showDetail('Опис предметного середовища')">Опис предметного середовища</button>
+                    <button onclick="showDetail('Тема Мета Місце розташування')">Тема Мета Місце розташування лаби</button>
+                    <button onclick="showDetail('СТРУКТУРА ДОКУМЕНТА')">СТРУКТУРА ДОКУМЕНТА</button>
+                    <button onclick="showDetail('HTML-код ТАБЛИЦІ')">HTML-код ТАБЛИЦІ</button>
+                    <button onclick="showDetail('HTML-код ФОРМИ')">HTML-код ФОРМИ</button>
+                    <button onclick="showDetail('HTML-код ЗОБРАЖЕННЯ')">HTML-код ЗОБРАЖЕННЯ</button>
+                    <button onclick="showDetail('ВИСНОВКИ')">ВИСНОВКИ</button>
+                </div>
+                <div id="buttons-lab2" style="display: none;">
+                    <button onclick="showDetail('Тема, мета ЛР2, Місце розташування сайту, звіту')">Тема, мета ЛР2, Місце розташування сайту, звіту</button>
+                    <button onclick="showDetail('Способи підключення стилів')">Способи підключення стилів</button>
+                    <button onclick="showDetail('Селектори тегу')">Селектори тегу</button>
+                    <button onclick="showDetail('Селектори класу')">Селектори класу</button>
+                    <button onclick="showDetail('Селектори ідентифікаторів')">Селектори ідентифікаторів</button>
+                    <button onclick="showDetail('Інші селектори')">Інші селектори</button>
+                    <button onclick="showDetail('CSS: Шрифт, Текст, Таблиці, Фон, Контур, Списки, CSS Просунутий')">CSS: Шрифт, Текст, Таблиці, Фон, Контур, Списки, CSS Просунутий</button>
+                    <button onclick="showDetail('Висновки')">Висновки</button>
+                </div>
             </div>
 
             <div class="lab-content">
