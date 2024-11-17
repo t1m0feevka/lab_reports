@@ -18,11 +18,13 @@
             const buttonsSection2 = document.getElementById('buttons-lab2');
             const buttonsSection3 = document.getElementById('buttons-lab3');
             const buttonsSection4 = document.getElementById('buttons-lab4');
+            const buttonsSection5 = document.getElementById('buttons-lab5');
 
             buttonsSection1.style.display = labNumber === 1 ? 'block' : 'none';
             buttonsSection2.style.display = labNumber === 2 ? 'block' : 'none';
             buttonsSection3.style.display = labNumber === 3 ? 'block' : 'none';
             buttonsSection4.style.display = labNumber === 4 ? 'block' : 'none';
+            buttonsSection5.style.display = labNumber === 5 ? 'block' : 'none';
         }
 
         function showDetail(detailType) {
@@ -65,6 +67,16 @@
                     'Планшетна версія': '<img src="img/tab_code.png" alt="Планшетна версія код"><img src="img/tab.png" alt="Планшетна версія">',
                     'Мобільна версія': '<img src="img/phone_code.png" alt="Мобільна версія код"><img src="img/phone.png" alt="Мобільна версія">',
                     'Висновки': '1. Десктопна версія</br>Для десктопних пристроїв (ширина більше 1025 пікселів) стилі налаштовуються для оптимального використання простору на великих екранах. Наприклад, зображення в хедері займає ширину 700px, а секції мають максимальну ширину 1400px</br></br>2. Планшетна версія</br>Для планшетів (ширина від 768 до 1024 пікселів) стилі адаптуються до середніх розмірів екранів. Зображення зменшуються до 500px, а секції мають максимальну ширину 800px. Це дозволяє ефективно використовувати простір без надмірного стиснення контенту</br></br>3. Мобільна версія</br>Для мобільних пристроїв (ширина менше 768 пікселів) стилі ще більше адаптуються: зображення зменшуються до 300px, а шрифти та елементи форм також стискаються для кращої зручності. Важливо, щоб всі елементи залишалися читабельними і легкими для взаємодії</br></br>Висновок:</br>Лабораторна робота над темою адаптивної верстки підтвердила важливість використання медіа-запитів та стратегій, які сприяють створенню зручних та функціональних веб-сторінок. Вона показала, що правильне налаштування стилів і використання інструментів розробника дозволяє досягти високого рівня адаптивності, що відповідає сучасним вимогам користувачів до веб-досвіду. Це знання є важливим для подальшої роботи у сфері веб-розробки, оскільки адаптивний дизайн стає все більш необхідним у зв`язку з розширенням використання мобільних пристроїв.'
+                },
+
+                5: {
+                    'Тема, Мета, Місце розташування сайту, звіту': 'Тема:  ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ. ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ ЗАСОВАМИ МОВИ JAVASCRIPT</br></br>Мета: Придбати практичні навички роботи з конструкціями мови JS, масивами та фугкціями у js-сценаріях. Реалізація програм засовами мови JAVASCRIPT</br></br>1. <a href="https://github.com/t1m0feevka/lab_reports" target="_blank">Звітний html-документ</a><br/>2. <a href="https://t1m0feevka.github.io/lab_reports/" target="_blank">Жива сторінка html-документа</a><br/>3. <a href="https://github.com/t1m0feevka/dilership" target="_blank">Посилання на WEB-застосунок</a><br/>4. <a href="https://t1m0feevka.github.io/dilership/" target="_blank">Жива сторінка WEB-застосунку</a><br/>5. <a href="https://github.com/t1m0feevka/independed_projects" target="_blank">Самостіна робота</a><br/>6. <a href="https://t1m0feevka.github.io/independed_projects/" target="_blank">Жива сторінка самостійної роботи',
+                    'Завдання 1': '<img src="img/task1.png"><img src="img/task1_html.png">',
+                    'Завдання 2': '<img src="img/task2.png"><img src="img/task2_html.png">',
+                    'Завдання 3': '<img src="img/task3.png"><img src="img/task3_html.png">',
+                    'Завдання 4': '<img src="img/task4.png"><img src="img/task4_html.png">',
+                    'Завдання 5': '<img src="img/task5.png"><img src="img/task5_html.png">',
+                    'Висновки': 'В результаті виконання лабораторної роботи було здобуто практичні навички роботи з масивами та функціями в JavaScript. Опановано способи створення масивів для зберігання даних, а також написання функцій для виконання операцій з цими даними. Додатково, було освоєно використання JavaScript для взаємодії з веб-сторінками, що дозволяє динамічно змінювати їхній вміст на основі введених користувачем даних. Завдяки цьому, вдалося поглибити розуміння роботи з JavaScript і покращити навички розробки веб-сторінок.'
                 }
             };
 
@@ -138,6 +150,15 @@
                     <button onclick="showDetail('Десктопна версія')">Десктопна версія</button>
                     <button onclick="showDetail('Планшетна версія')">Планшетна версія</button>
                     <button onclick="showDetail('Мобільна версія')">Мобільна версія</button>
+                    <button onclick="showDetail('Висновки')">Висновки</button>
+                </div>
+                <div id="buttons-lab5" style="display: none;">
+                    <button onclick="showDetail('Тема, Мета, Місце розташування сайту, звіту')">Тема, Мета, Місце розташування сайту, звіту</button>
+                    <button onclick="showDetail('Завдання 1')">Завдання 1</button>
+                    <button onclick="showDetail('Завдання 2')">Завдання 2</button>
+                    <button onclick="showDetail('Завдання 3')">Завдання 3</button>
+                    <button onclick="showDetail('Завдання 4')">Завдання 4</button>
+                    <button onclick="showDetail('Завдання 5')">Завдання 5</button>
                     <button onclick="showDetail('Висновки')">Висновки</button>
                 </div>
             </div>
