@@ -19,12 +19,14 @@
             const buttonsSection3 = document.getElementById('buttons-lab3');
             const buttonsSection4 = document.getElementById('buttons-lab4');
             const buttonsSection5 = document.getElementById('buttons-lab5');
+            const buttonsSection6 = document.getElementById('buttons-lab6');
 
             buttonsSection1.style.display = labNumber === 1 ? 'block' : 'none';
             buttonsSection2.style.display = labNumber === 2 ? 'block' : 'none';
             buttonsSection3.style.display = labNumber === 3 ? 'block' : 'none';
             buttonsSection4.style.display = labNumber === 4 ? 'block' : 'none';
             buttonsSection5.style.display = labNumber === 5 ? 'block' : 'none';
+            buttonsSection6.style.display = labNumber === 6 ? 'block' : 'none';
         }
 
         function showDetail(detailType) {
@@ -77,7 +79,16 @@
                     'Завдання 4': '<img src="img/task4.png"><img src="img/task4_html.png">',
                     'Завдання 5': '<img src="img/task5.png"><img src="img/task5_html.png">',
                     'Висновки': 'В результаті виконання лабораторної роботи було здобуто практичні навички роботи з масивами та функціями в JavaScript. Опановано способи створення масивів для зберігання даних, а також написання функцій для виконання операцій з цими даними. Додатково, було освоєно використання JavaScript для взаємодії з веб-сторінками, що дозволяє динамічно змінювати їхній вміст на основі введених користувачем даних. Завдяки цьому, вдалося поглибити розуміння роботи з JavaScript і покращити навички розробки веб-сторінок.'
-                }
+                },
+                6: {
+                    'Тема, Мета, Місце розташування сайту, звіту': 'Тема:  ОБ`ЄКТ. МЕТОДИ ОБ`ЄКТА. МАСИВ ОБ`ЄКТІВ. ДЕСТРУКТУРИЗАЦІЯ ОБ`ЄКТІВ. CALLBACK. СТРІЛОЧНІ ФУНКЦІЇ. СТРІЛОЧНІ ФУНКЦІЇ ЯК КОЛБЕКИ.<br/><br/>Мета: придбати практичні навички роботи з об`єктами. Методи об`єкта.. Callback. Стрілочні функції. Стрілочні функції як колбеки..Реалізація програм засовами мови JAVASCRIPT</br></br>1. <a href="https://github.com/t1m0feevka/lab_reports" target="_blank">Звітний html-документ</a><br/>2. <a href="https://t1m0feevka.github.io/lab_reports/" target="_blank">Жива сторінка html-документа</a><br/>3. <a href="https://github.com/t1m0feevka/dilership" target="_blank">Посилання на WEB-застосунок</a><br/>4. <a href="https://t1m0feevka.github.io/dilership/" target="_blank">Жива сторінка WEB-застосунку</a><br/>5. <a href="https://github.com/t1m0feevka/independed_projects" target="_blank">Самостіна робота</a><br/>6. <a href="https://t1m0feevka.github.io/independed_projects/" target="_blank">Жива сторінка самостійної роботи',
+                    'Завдання 1': '<img src="img/task1_6.png">',
+                    'Завдання 2': '<img src="img/task2_6.png">',
+                    'Завдання 3': '<img src="img/task3_6.png">',
+                    'Завдання 4': '<img src="img/task4_6.png">',
+                    'Завдання 5': '<img src="img/task5_6.png">',
+                    'Висновки': 'Я здобув практичні навички роботи з об`єктами та методами об`єкта, навчився створювати та маніпулювати масивами об`єктів. Також ознайомився з деструктуризацією об`єктів, що дозволяє ефективно витягувати значення з об`єктів. Поглибив знання про callback функції, що дозволяють обробляти асинхронні операції, а також освоїв стрілочні функції, які зручні для створення компактного та легкого для читання коду. Стрілочні функції також використовуються як колбеки, що дозволяє зручно працювати з асинхронними задачами та подіями. Здобуті знання та навички допомагають ефективно писати чистий, зрозумілий і гнучкий код у проектах на JavaScript.'
+                },
             };
 
             document.getElementById('lab-detail-content').innerHTML = labDetails[currentLab][detailType];
@@ -153,6 +164,15 @@
                     <button onclick="showDetail('Висновки')">Висновки</button>
                 </div>
                 <div id="buttons-lab5" style="display: none;">
+                    <button onclick="showDetail('Тема, Мета, Місце розташування сайту, звіту')">Тема, Мета, Місце розташування сайту, звіту</button>
+                    <button onclick="showDetail('Завдання 1')">Завдання 1</button>
+                    <button onclick="showDetail('Завдання 2')">Завдання 2</button>
+                    <button onclick="showDetail('Завдання 3')">Завдання 3</button>
+                    <button onclick="showDetail('Завдання 4')">Завдання 4</button>
+                    <button onclick="showDetail('Завдання 5')">Завдання 5</button>
+                    <button onclick="showDetail('Висновки')">Висновки</button>
+                </div>
+                <div id="buttons-lab6" style="display: none;">
                     <button onclick="showDetail('Тема, Мета, Місце розташування сайту, звіту')">Тема, Мета, Місце розташування сайту, звіту</button>
                     <button onclick="showDetail('Завдання 1')">Завдання 1</button>
                     <button onclick="showDetail('Завдання 2')">Завдання 2</button>
